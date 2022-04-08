@@ -1,0 +1,104 @@
+<!-- <h1>asd</h1>
+<mat-form-field style="border-color: black;" appearance="outline">
+    <mat-label>Toppings</mat-label>
+    <mat-select [formControl]="toppings" multiple>
+      <mat-select-trigger>
+        {{toppings.value ? toppings.value[0] : ''}}
+        <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+          (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+      </mat-select-trigger>
+      <mat-option *ngFor="let topping of pruebass" >{{topping.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+ -->
+
+
+<br>
+<br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <label>Categoria: </label>
+  <mat-form-field appearance="fill">
+    <mat-label>Categoria</mat-label>
+    <mat-select [(ngModel)]="selectedValue" (selectionChange)="onComidaChange()" name="food">
+      <mat-option *ngFor="let food of pruebass" [value]=food.name>
+        {{food.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <label>Producto: </label>
+    <mat-form-field appearance="fill">
+        <mat-label>Producto</mat-label>
+        <mat-select [(ngModel)]="selectedValue2" (selectionChange)="onProductoChange()" name="comida">
+          <mat-option *ngFor="let comida of comidas" [value]="comida.name">
+            {{comida.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label>Marca: </label>
+      <mat-form-field appearance="fill">
+        <mat-label>Marca</mat-label>
+        <mat-select  [(ngModel)]="selectedValue3" name="marca">
+          <mat-option *ngFor="let marca of marcas" [value]="marca"  >
+            {{marca.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+     <!--  <mat-form-field appearance="fill">
+        <mat-label>Favorite food</mat-label>
+        <mat-select   [(ngModel)]="selectedValue3">
+          <mat-option *ngFor="let vestimenta of vestimentas" [value]="vestimenta">
+            {{vestimenta.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> -->
+
+    <!--   <mat-form-field appearance="fill">
+        <mat-label>Favorite food</mat-label>
+        <mat-select   [(ngModel)]="selectedValue3">
+          <mat-option *ngFor="let bebida of bebidas" [value]="bebida">
+            {{bebida.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> -->
+  
+<!-- 
+  <div *ngIf="pruebass.name === 'comidas'">
+    <mat-form-field appearance="fill">
+        <mat-label>Favorite food</mat-label>
+        <mat-select  >
+          <mat-option *ngFor="let categoria of pruebass" [value]="categoria">
+            {{categoria.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+        <mat-label>Favorite food</mat-label>
+        <mat-select  >
+          <mat-option *ngFor="let categoria of pruebass" [value]="categoria">
+            {{categoria.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+  <div>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Favorite food</mat-label>
+        <mat-select  >
+          <mat-option *ngFor="let categoria of pruebass" [value]="categoria">
+            {{categoria.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+  -->
+ 
